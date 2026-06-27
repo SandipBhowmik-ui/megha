@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hi Megha ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    :root {
+      --pink: #FF6B9D;
+      --pink-lt: #FFB3D1;
+      --lav: #C084FC;
+      --lav-lt: #EDE9FE;
+      --peach: #FFD6CC;
+      --text: #5C3D5E;
+      --soft: #9B7EA0;
+      --bg: #FFF0F5;
+      --glass: rgba(255, 255, 255, 0.6);
+      --gb: rgba(255, 255, 255, 0.8);
+      --sh: 0 8px 40px rgba(192, 100, 180, 0.13);
+      --fd: 'Playfair Display', Georgia, serif;
+      --fb: 'DM Sans', system-ui, sans-serif;
+      --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    html {
+      font-size: 16px
+    }
+
+    body {
+      font-family: var(--fb);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-image: radial-gradient(ellipse 70% 55% at 15% 5%, rgba(255, 179, 209, .3) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 85% 95%, rgba(192, 132, 252, .22) 0%, transparent 55%),
+        radial-gradient(ellipse 40% 35% at 50% 50%, rgba(255, 214, 204, .15) 0%, transparent 60%);
+      background-attachment: fixed;
+      opacity: 0;
+      transition: opacity .4s;
+    }
+
+    body.rdy {
+      opacity: 1
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: var(--fb)
+    }
+
+    button:focus-visible {
+      outline: 3px solid var(--pink);
+      outline-offset: 3px;
+      border-radius: 50px
+    }
+
+    @keyframes floatH {
+      0% {
+        opacity: 0;
+        transform: translateY(0) rotate(-10deg) scale(.7)
+      }
+
+      10% {
+        opacity: .8
+      }
+
+      85% {
+        opacity: .5
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-105vh) rotate(20deg) scale(1.1)
+      }
+    }
+
+    @keyframes hbeat {
+
+      0%,
+      100% {
+        transform: scale(1)
+      }
+
+      14% {
+        transform: scale(1.18)
+      }
+
+      28% {
+        transform: scale(1)
+      }
+
+      42% {
+        transform: scale(1.1)
+      }
+
+      56% {
+        transform: scale(1)
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(28px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @keyframes bIn {
+      0% {
+        opacity: 0;
+        transform: scale(.3)
+      }
+
+      60% {
+        opacity: 1;
+        transform: scale(1.08)
+      }
+
+      80% {
+        transform: scale(.96)
+      }
+
+      100% {
+        transform: scale(1)
+      }
+    }
+
+    @keyframes gPulse {
+
+      0%,
+      100% {
+        box-shadow: 0 4px 20px rgba(255, 107, 157, .35)
+      }
+
+      50% {
+        box-shadow: 0 4px 36px rgba(255, 107, 157, .6), 0 0 60px rgba(192, 132, 252, .2)
+      }
+    }
+
+    @keyframes wiggle {
+
+      0%,
+      100% {
+        transform: rotate(0)
+      }
+
+      20% {
+        transform: rotate(-8deg)
+      }
+
+      40% {
+        transform: rotate(8deg)
+      }
+
+      60% {
+        transform: rotate(-5deg)
+      }
+
+      80% {
+        transform: rotate(5deg)
+      }
+    }
+
+    @keyframes ripple {
+      to {
+        transform: scale(4);
+        opacity: 0
+      }
+    }
+
+    @keyframes sIn {
+      from {
+        opacity: 0;
+        transform: translateY(36px) scale(.96)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1)
+      }
+    }
+
+    @keyframes sOut {
+      from {
+        opacity: 1;
+        transform: translateY(0)
+      }
+
+      to {
+        opacity: 0;
+        transform: translateY(-28px)
+      }
+    }
+
+    @keyframes twkl {
+
+      0%,
+      100% {
+        opacity: .2;
+        transform: scale(.7)
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.3)
+      }
+    }
+
+    @keyframes barFill {
+      from {
+        width: 0
+      }
+
+      to {
+        width: var(--w)
+      }
+    }
+
+    @keyframes stampIn {
+      0% {
+        transform: scale(3) rotate(-30deg);
+        opacity: 0
+      }
+
+      60% {
+        transform: scale(.9) rotate(3deg);
+        opacity: 1
+      }
+
+      100% {
+        transform: scale(1) rotate(-2deg);
+        opacity: 1
+      }
+    }
+
+    @keyframes shake {
+
+      0%,
+      100% {
+        transform: translateX(0)
+      }
+
+      20% {
+        transform: translateX(-6px)
+      }
+
+      40% {
+        transform: translateX(6px)
+      }
+
+      60% {
+        transform: translateX(-4px)
+      }
+
+      80% {
+        transform: translateX(4px)
+      }
+    }
+
+    @keyframes countPulse {
+
+      0%,
+      100% {
+        transform: scale(1)
+      }
+
+      50% {
+        transform: scale(1.05)
+      }
+    }
+
+    #hbg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden
+    }
+
+    .fh {
+      position: absolute;
+      bottom: -60px;
+      animation: floatH linear infinite;
+      will-change: transform, opacity;
+      user-select: none
+    }
+
+    #pw {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: rgba(255, 179, 209, .2);
+      z-index: 200
+    }
+
+    #pb {
+      height: 100%;
+      background: linear-gradient(90deg, var(--pink), var(--lav));
+      border-radius: 0 999px 999px 0;
+      transition: width .7s var(--spring);
+      box-shadow: 0 0 12px rgba(255, 107, 157, .5)
+    }
+
+    #pl {
+      position: fixed;
+      top: 10px;
+      right: 14px;
+      font-size: .7rem;
+      font-weight: 600;
+      color: var(--soft);
+      z-index: 201;
+      letter-spacing: .05em
+    }
+
+    #mb {
+      position: fixed;
+      top: 10px;
+      left: 14px;
+      z-index: 201;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1.5px solid var(--gb);
+      box-shadow: var(--sh);
+      font-size: .95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .2s var(--spring)
+    }
+
+    #mb:hover {
+      transform: scale(1.15)
+    }
+
+    #toast {
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%) translateY(16px);
+      background: var(--text);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-size: .82rem;
+      font-weight: 500;
+      opacity: 0;
+      pointer-events: none;
+      transition: all .3s var(--spring);
+      z-index: 300;
+      white-space: nowrap
+    }
+
+    #toast.on {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0)
+    }
+
+    #cvs {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 100;
+      display: none
+    }
+
+    .page {
+      display: none;
+      min-height: 100vh;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 60px 20px 48px;
+      position: relative;
+      z-index: 1
+    }
+
+    .page.on {
+      display: flex;
+      animation: sIn .55s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    .card {
+      background: var(--glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1.5px solid var(--gb);
+      border-radius: 28px;
+      box-shadow: var(--sh);
+      padding: 48px 40px;
+      width: 100%;
+      max-width: 480px;
+      text-align: center;
+      position: relative;
+      overflow: hidden
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 15%;
+      right: 15%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .95), transparent)
+    }
+
+    .ey {
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--soft);
+      margin-bottom: 10px
+    }
+
+    .ttl {
+      font-family: var(--fd);
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: 10px
+    }
+
+    .sub {
+      font-size: 1rem;
+      color: var(--soft);
+      line-height: 1.6;
+      margin-bottom: 28px
+    }
+
+    .bp {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 38px;
+      background: linear-gradient(135deg, var(--pink), var(--lav));
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 999px;
+      box-shadow: 0 4px 20px rgba(255, 107, 157, .35);
+      transition: transform .2s var(--spring), box-shadow .2s;
+      animation: gPulse 2.4s ease-in-out infinite;
+      position: relative;
+      overflow: hidden
+    }
+
+    .bp:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 8px 32px rgba(255, 107, 157, .45)
+    }
+
+    .bp:active {
+      transform: scale(.96)
+    }
+
+    .bg2 {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      background: transparent;
+      color: var(--pink);
+      font-size: .95rem;
+      font-weight: 500;
+      border-radius: 999px;
+      border: 1.5px solid var(--pink-lt);
+      transition: all .2s
+    }
+
+    .bg2:hover {
+      background: rgba(255, 107, 157, .09);
+      transform: translateY(-1px)
+    }
+
+    .opts {
+      display: grid;
+      gap: 12px;
+      width: 100%;
+      margin-top: 20px
+    }
+
+    .opts.c2 {
+      grid-template-columns: 1fr 1fr
+    }
+
+    .opts.c3 {
+      grid-template-columns: repeat(3, 1fr)
+    }
+
+    .opt {
+      background: rgba(255, 255, 255, .72);
+      border: 1.5px solid rgba(255, 179, 209, .35);
+      border-radius: 16px;
+      padding: 16px 20px;
+      font-size: .95rem;
+      font-weight: 500;
+      color: var(--text);
+      text-align: left;
+      transition: all .2s var(--spring);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer
+    }
+
+    .opt:hover {
+      background: rgba(255, 179, 209, .2);
+      border-color: var(--pink-lt);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 6px 24px rgba(255, 107, 157, .15)
+    }
+
+    .opt:active {
+      transform: scale(.97)
+    }
+
+    .opt.picked {
+      background: linear-gradient(135deg, rgba(255, 107, 157, .18), rgba(192, 132, 252, .15));
+      border-color: var(--pink)
+    }
+
+    .oem {
+      font-size: 1.6rem;
+      display: block;
+      margin-bottom: 6px
+    }
+
+    .resp {
+      background: linear-gradient(135deg, rgba(255, 179, 209, .18), rgba(192, 132, 252, .13));
+      border: 1.5px solid rgba(255, 179, 209, .45);
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-top: 20px;
+      font-size: .97rem;
+      color: var(--text);
+      line-height: 1.65;
+      display: none;
+      animation: bIn .5s var(--spring) both
+    }
+
+    .resp.on {
+      display: block
+    }
+
+    #ynw {
+      position: relative;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 28px;
+      flex-wrap: wrap
+    }
+
+    .byes {
+      padding: 13px 36px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 999px;
+      color: #fff;
+      background: linear-gradient(135deg, #FF6B9D, #FF8FB3);
+      box-shadow: 0 4px 20px rgba(255, 107, 157, .35);
+      transition: all .2s var(--spring)
+    }
+
+    .byes:hover {
+      transform: translateY(-2px) scale(1.06)
+    }
+
+    .bno {
+      padding: 13px 36px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 999px;
+      color: var(--text);
+      background: rgba(255, 255, 255, .65);
+      border: 1.5px solid rgba(255, 179, 209, .5);
+      transition: all .15s
+    }
+
+    #bno.run {
+      position: absolute;
+      z-index: 5
+    }
+
+    #bno.sttl {
+      position: relative;
+      animation: bIn .45s var(--spring) both
+    }
+
+    .atn {
+      font-size: .82rem;
+      color: var(--soft);
+      margin-top: 12px;
+      min-height: 1.3em;
+      animation: fadeUp .3s ease both
+    }
+
+    .hh {
+      display: inline-block;
+      margin-bottom: 20px;
+      animation: hbeat 1.7s ease-in-out infinite;
+      filter: drop-shadow(0 4px 18px rgba(255, 107, 157, .42))
+    }
+
+    .spk {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--pink-lt);
+      animation: twkl 2.5s ease-in-out infinite;
+      pointer-events: none
+    }
+
+    .rpl {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .4);
+      width: 16px;
+      height: 16px;
+      margin: -8px 0 0 -8px;
+      animation: ripple .55s linear;
+      pointer-events: none
+    }
+
+    .hide {
+      display: none !important
+    }
+
+    /* Compat bars */
+    .cb {
+      background: rgba(255, 179, 209, .15);
+      border-radius: 999px;
+      height: 14px;
+      width: 100%;
+      overflow: hidden;
+      margin: 4px 0 2px
+    }
+
+    .cb-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--pink), var(--lav));
+      width: 0;
+      transition: width 1s var(--spring)
+    }
+
+    .cb-row {
+      text-align: left;
+      margin-bottom: 14px
+    }
+
+    .cb-label {
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--text);
+      display: flex;
+      justify-content: space-between
+    }
+
+    .cb-note {
+      font-size: .75rem;
+      color: var(--soft);
+      font-style: italic;
+      margin-top: 2px
+    }
+
+    /* Certificate */
+    .cert {
+      border: 2px solid var(--pink-lt);
+      border-radius: 20px;
+      padding: 28px 24px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, .8), rgba(237, 233, 254, .5));
+      position: relative;
+      text-align: center
+    }
+
+    .cert-seal {
+      position: absolute;
+      top: -18px;
+      right: -10px;
+      font-size: 3rem;
+      animation: stampIn .6s var(--spring) both;
+      filter: drop-shadow(0 3px 8px rgba(255, 107, 157, .3))
+    }
+
+    /* Easter eggs */
+    .egg {
+      position: absolute;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: transform .2s var(--spring);
+      user-select: none;
+      filter: drop-shadow(0 2px 6px rgba(255, 107, 157, .25))
+    }
+
+    .egg:hover {
+      transform: scale(1.4)
+    }
+
+    .egg.found {
+      animation: bIn .4s var(--spring) both;
+      pointer-events: none
+    }
+
+    /* Countdown */
+    .cntdn {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px 0
+    }
+
+    .cntdn-unit {
+      background: rgba(255, 255, 255, .7);
+      border: 1.5px solid var(--pink-lt);
+      border-radius: 16px;
+      padding: 12px 16px;
+      min-width: 70px;
+      animation: countPulse 3s ease infinite
+    }
+
+    .cntdn-num {
+      font-family: var(--fd);
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      font-weight: 700;
+      color: var(--pink);
+      line-height: 1
+    }
+
+    .cntdn-lbl {
+      font-size: .65rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--soft);
+      margin-top: 4px
+    }
+
+    /* Form inputs */
+    .fi {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid rgba(255, 179, 209, .35);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .7);
+      font-family: var(--fb);
+      font-size: .92rem;
+      color: var(--text);
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+      resize: vertical
+    }
+
+    .fi:focus {
+      border-color: var(--pink);
+      box-shadow: 0 0 0 3px rgba(255, 107, 157, .12)
+    }
+
+    .fi::placeholder {
+      color: var(--soft)
+    }
+
+    .fg {
+      text-align: left;
+      margin-bottom: 16px
+    }
+
+    .fg label {
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--text);
+      display: block;
+      margin-bottom: 6px
+    }
+
+    select.fi {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239B7EA0' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center
+    }
+
+    /* Summary */
+    .scard {
+      background: rgba(255, 255, 255, .65);
+      border: 1.5px solid rgba(255, 179, 209, .25);
+      border-radius: 16px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+      text-align: left
+    }
+
+    .scard-title {
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--soft);
+      margin-bottom: 4px
+    }
+
+    .scard-val {
+      font-family: var(--fd);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text)
+    }
+
+    /* Chilli */
+    .chilli-sel {
+      font-size: 2rem;
+      cursor: pointer;
+      transition: all .2s var(--spring);
+      display: inline-block;
+      filter: grayscale(1) opacity(.4)
+    }
+
+    .chilli-sel.lit {
+      filter: grayscale(0) opacity(1);
+      transform: scale(1.1)
+    }
+
+    .chilli-sel:hover {
+      transform: scale(1.3)
+    }
+
+    /* Dots */
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 179, 209, .3);
+      transition: all .3s;
+      display: inline-block
+    }
+
+    .dot.on {
+      background: var(--pink)
+    }
+
+    @media(max-width:480px) {
+      .card {
+        padding: 36px 24px;
+        border-radius: 22px
+      }
+
+      .opts.c2,
+      .opts.c3 {
+        grid-template-columns: 1fr
+      }
+
+      .ttl {
+        font-size: 1.75rem
+      }
+
+      #ynw {
+        min-height: 70px
+      }
+    }
+
+    @media(max-width:360px) {
+      .card {
+        padding: 28px 18px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="hbg" aria-hidden="true"></div>
+  <div id="pw">
+    <div id="pb" style="width:0%"></div>
+  </div>
+  <span id="pl"></span>
+  <button id="mb" aria-label="Toggle music">🎵</button>
+  <audio id="bgm" loop preload="none"></audio>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <canvas id="cvs" aria-hidden="true"></canvas>
+
+  <!-- ====== P0: LANDING ====== -->
+  <section class="page on" id="p0">
+    <div class="card" style="max-width:440px">
+      <span class="spk" style="top:18px;right:28px;animation-delay:.3s"></span>
+      <span class="spk" style="top:40px;left:22px;background:var(--lav);animation-delay:1s"></span>
+      <span class="spk" style="bottom:28px;right:40px;background:var(--peach);animation-delay:1.7s"></span>
+      <div class="hh">
+        <svg width="76" height="68" viewBox="0 0 76 68" fill="none">
+          <path
+            d="M38 64C38 64 4 43 4 22C4 12.6 11.6 5 21 5C27.2 5 32.7 8.3 38 14.5C43.3 8.3 48.8 5 55 5C64.4 5 72 12.6 72 22C72 43 38 64 38 64Z"
+            fill="url(#hg1)" stroke="rgba(255,107,157,.25)" stroke-width="1.5" />
+          <circle cx="26" cy="19" r="2.2" fill="rgba(255,255,255,.75)" />
+          <circle cx="20" cy="27" r="1.4" fill="rgba(255,255,255,.5)" />
+          <defs>
+            <linearGradient id="hg1" x1="4" y1="5" x2="72" y2="64" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FF6B9D" />
+              <stop offset="100%" stop-color="#C084FC" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <h1 class="ttl" style="animation:fadeUp .6s .05s both;font-size:clamp(2rem,6vw,2.8rem)">Hi Megha ❤️</h1>
+      <p class="sub" style="animation:fadeUp .6s .15s both;font-size:1.05rem">I made something just for you.</p>
+      <p
+        style="font-family:var(--fd);font-style:italic;color:var(--soft);font-size:.95rem;margin-bottom:32px;animation:fadeUp .6s .25s both">
+        No pressure. No judgment.<br>Just a little adventure. 🌸</p>
+      <button class="bp" style="animation:fadeUp .6s .38s both" onclick="go(1)">Start the Adventure ✨</button>
+      <p style="color:var(--soft);font-size:.78rem;margin-top:20px;animation:fadeUp .6s .5s both">17 pages &nbsp;·&nbsp;
+        ~9 mins &nbsp;·&nbsp; 100% wholesome</p>
+    </div>
+  </section>
+
+  <!-- ====== P1: DO YOU LIKE ME ====== -->
+  <section class="page" id="p1">
+    <div class="card" id="p1c" style="max-width:460px">
+      <span class="spk" style="top:20px;right:30px;animation-delay:.5s"></span>
+      <span class="spk" style="bottom:30px;left:24px;background:var(--lav);animation-delay:1.2s"></span>
+      <div style="font-size:2rem;margin-bottom:12px">😌</div>
+      <p class="ey" style="animation:fadeUp .5s .05s both">Before we begin…</p>
+      <h2 class="ttl" style="animation:fadeUp .5s .12s both">Do you like me?</h2>
+      <p class="sub" style="animation:fadeUp .5s .2s both">Be honest. I can take it. (Probably.) 😅</p>
+      <p class="atn" id="p1n" aria-live="polite">&nbsp;</p>
+      <div id="ynw">
+        <button class="byes" onclick="p1Y()" aria-label="Yes">❤️ Yes</button>
+        <button class="bno" id="bno" onmouseenter="noRun()" ontouchstart="noRun(event)" onclick="p1N()"
+          aria-label="No">🙈 No</button>
+      </div>
+      <div class="resp" id="p1r" role="status"></div>
+      <div id="p1x" class="hide" style="margin-top:24px"><button class="bp" onclick="go(2)">Continue 🌸</button></div>
+    </div>
+  </section>
+
+  <!-- ====== P2: GREEN FLAG TEST ====== -->
+  <section class="page" id="p2">
+    <div class="card">
+      <span class="spk" style="top:16px;left:26px;animation-delay:.4s"></span>
+      <span class="spk" style="bottom:20px;right:30px;background:var(--lav);animation-delay:1.3s"></span>
+      <div style="font-size:2.5rem;margin-bottom:12px">🌳</div>
+      <p class="ey" style="animation:fadeUp .5s .05s both">A critical review</p>
+      <h2 class="ttl" style="animation:fadeUp .5s .12s both">You once called me a green flag…</h2>
+      <p class="sub" style="animation:fadeUp .5s .2s both">Are you sure about your decision? 🤔</p>
+      <div class="opts" style="animation:fadeUp .5s .3s both">
+        <button class="opt" onclick="pick(this,'p2r','p2x','greenFlag',0)"><span class="oem">🌳</span>Definitely.
+          Greenest flag I've seen.</button>
+        <button class="opt" onclick="pick(this,'p2r','p2x','greenFlag',1)"><span class="oem">🤔</span>Still
+          investigating. Need more data.</button>
+        <button class="opt" onclick="pick(this,'p2r','p2x','greenFlag',2)"><span class="oem">🚩</span>Maybe you're
+          secretly red and hiding it well.</button>
+      </div>
+      <div class="resp" id="p2r"></div>
+      <div id="p2x" class="hide" style="margin-top:24px"><button class="bp" onclick="go(3)">Next 🎬</button></div>
+    </div>
+  </section>
+
+  <!-- ====== P3: SING A SONG ====== -->
+  <section class="page" id="p3">
+    <div class="card">
+      <span class="spk" style="top:18px;right:24px;animation-delay:.6s"></span>
+      <span class="spk" style="bottom:22px;left:28px;background:var(--peach);animation-delay:1.1s"></span>
+      <div style="font-size:2.5rem;margin-bottom:12px">🎵</div>
+      <p class="ey" style="animation:fadeUp .5s .05s both">A musical request</p>
+      <h2 class="ttl" style="animation:fadeUp .5s .12s both">When will you sing a song for me? 🎤</h2>
+      <p class="sub" style="animation:fadeUp .5s .2s both">Choose my fate. I hope you have good earplugs. 🙉</p>
+      <div class="opts" style="animation:fadeUp .5s .3s both">
+        <button class="opt" onclick="pick(this,'p3r','p3x','firstMeet',0)"><span class="oem">🎤</span>In October, live
+          and unplugged</button>
+        <button class="opt" onclick="pick(this,'p3r','p3x','firstMeet',1)"><span class="oem">📞</span>Next time we
+          actually get on a call</button>
+        <button class="opt" onclick="pick(this,'p3r','p3x','firstMeet',2)"><span class="oem">🍕</span>Only if you buy me
+          pizza</button>
+        <button class="opt" onclick="pick(this,'p3r','p3x','firstMeet',3)"><span class="oem">🙉</span>Never. Spare my
+          ears, please!</button>
+      </div>
+      <div class="resp" id="p3r"></div>
+      <div id="p3x" class="hide" style="margin-top:24px"><button class="bp" onclick="go(4)">Next 💬</button></div>
+    </div>
+  </section>
+
+  <!-- ====== P4: GUESS WHO ====== -->
+  <section class="page" id="p4">
+    <div class="card" style="max-width:500px">
+      <span class="spk" style="top:14px;left:20px;animation-delay:.3s"></span>
+      <span class="spk" style="bottom:26px;right:24px;background:var(--lav);animation-delay:1s"></span>
+      <div style="font-size:2rem;margin-bottom:12px">💬</div>
+      <p class="ey" style="animation:fadeUp .5s .05s both">The quote game</p>
+      <h2 class="ttl" style="animation:fadeUp .5s .12s both">Who Said It? 🤔</h2>
+      <p class="sub" style="animation:fadeUp .5s .2s both">Things from our chats. You guess who said it.</p>
+      <div id="gwd" style="display:flex;gap:5px;justify-content:center;margin-bottom:16px"></div>
+      <p id="gwq"
+        style="font-family:var(--fd);font-size:1.2rem;font-weight:600;color:var(--text);padding:16px;background:rgba(255,255,255,.5);border-radius:14px;border:1.5px dashed var(--pink-lt);min-height:3em;margin-bottom:18px">
+      </p>
+      <div id="gwo" class="opts c2" style="animation:fadeUp .5s .3s both">
+        <button class="opt" style="text-align:center" id="gwS" onclick="gwAns('sandip')"><span
+            class="oem">🙋‍♂️</span>Sandip</button>
+        <button class="opt" style="text-align:center" id="gwM" onclick="gwAns('megha')"><span
+            class="oem">🙋‍♀️</span>Megha</button>
+      </div>
+      <div class="resp" id="gwr"></div>
+      <div id="p4x" class="hide" style="margin-top:24px"><button class="bp" onclick="go(5)">Next ⚡</button></div>
+    </div>
+  </section>
+
+  <!-- ====== P5: RAPID FIRE ====== -->
+  <section class="page" id="p5">
+    <div class="card" style="max-width:500px">
+      <span class="spk" style="top:16px;right:22px;animation-delay:.5s"></span>
+      <div style="font-size:2rem;margin-bottom:12px">⚡</div>
+      <p class="ey" style="animation:fadeUp .5s .05s both">No overthinking!</p>
+      <h2 class="ttl" style="animation:fadeUp .5s .12s both">Rapid Fire!</h2>
+      <p class="sub" style="animation:fadeUp .5s .2s both">10 questions. Quick answers. Go! 🧠💨</p>
+      <div id="rfd" style="display:flex;gap:5px;justify-content:center;margin-bottom:16px"></div>
+      <p id="rfq"
+        style="font-family:var(--fd);font-size:1.12rem;font-weight:600;color:var(--text);min-height:2.5em;margin-bottom:18px">
+      </p>
+      <div id="rfo" class="opts c2">
+        <button class="opt" style="text-align:center" id="rfme" onclick="rfAns('me')"><span
+            class="oem">🙋‍♂️</span>Me</button>
+        <button class="opt" style="text-align:center" id="rfyu" onclick="rfAns('you')"><span
+            class="oem">🙋‍♀️</span>You</button>
+      </div>
+      <div class="resp" id="rfr"></div>
+      <div id="p5x" class="hide" style="margin-top:24px"><button class="bp" onclick="go(6)">Next — Mini Game!
+          🎮</button></div>
+    </div>
+  </section>
+
+  <!-- ====== P6: HEART CATCHER ====== -->
+  <section class="page" id="p6">
+    <div class="card" style="max-width:500px;padding:32px 24px">
+      <span class="spk" style="top:14px;right:22px;animation-delay:.5s"></span>
+      <div style="font-size:2rem;margin-bottom:10px">🎮</div>
+      <p class="ey">Catch them all!</p>
+      <h2 class="ttl" style="font-size:clamp(1.5rem,4vw,2rem)">Heart Catcher 💖</h2>
+      <p class="sub">Catch 10 hearts in 20 seconds. Each reveals something about you. 💕</p>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;padding:0 4px">
+        <span id="gtm" style="font-family:var(--fd);font-size:1.6rem;font-weight:700;color:var(--pink)">20s</span>
+        <span id="gsc" style="font-size:.95rem;font-weight:600;color:var(--soft)">0 / 10 💖</span>
+      </div>
+      <div id="gar"
+        style="position:relative;width:100%;height:320px;border-radius:20px;background:linear-gradient(180deg,var(--lav-lt),rgba(255,214,204,.25));border:2px dashed var(--pink-lt);overflow:hidden;cursor:pointer;touch-action:manipulation">
+        <div id="gstart"
+          style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3">
+          <button class="bp" onclick="startGame()" style="animation:gPulse 2s ease infinite">▶ Start</button>
+        </div>
+      </div>
+      <div id="gcmps" style="margin-top:16px;max-height:0;overflow:hidden;transition:max-height .5s ease"></div>
+      <div id="p6x" class="hide" style="margin-top:20px"><button class="bp" onclick="go(7)">Next 📋</button></div>
+    </div>
+  </section>
+
+  <!-- ====== P7: OCTOBER PERMISSION SLIP ====== -->
+  <section class="page" id="p7">
+    <div class="card" style="max-width:500px">
+      <span class="spk" style="top:18px;left:24px;animation-delay:.3s"></span>
+      <span class="spk" style="bottom:20px;right:28px;background:var(--peach);animation-delay:1.4s"></span>
+      <div style="font-size:2rem;margin-bottom:12px">📋</div>
+      <p class="ey" style="animation:fadeUp .5s .05s both">Permission required</p>
+      <h2 class="ttl" style="animation:fadeUp .5s .12s both">October Permission Slip</h2>
+      <p class="sub" style="animation:fadeUp .5s .2s both">Some things I need to know before October. 😏</p>
+      <div id="psd" style="display:flex;gap:5px;justify-content:center;margin-bottom:16px"></div>
+      <p id="psq"
+        style="font-family:var(--fd);font-size:1.1rem;font-weight:600;color:var(--text);min-height:2.5em;margin-bottom:18px">
+      </p>
+      <div id="pso" class="opts"></div>
+      <div class="resp" id="psr"></div>
+      <div id="p7x" class="hide" style="margin-top:24px"><button class="bp" onclick="go(8)">Next 🏆</button></div>
+    </div>
+  </section>
+
+  <!-- ====== P8: TEASING CHAMPIONSHIP ====== -->
+  <section class="page" id="p8">
+    <div class="card">
+      <span class="spk" style="top:20px;right:26px;animation-delay:.4s"></span>
+      <span class="spk" style="bottom:18px;left:22px;background:var(--lav);animation-delay:1.2s"></span>
+      <div style="font-size:2.5rem;margin-bottom:12px">🏆</div>
+      <p class="ey" style="animation:fadeUp .5s .05s both">The ultimate showdown</p>
+      <h2 class="ttl" style="animation:fadeUp .5s .12s both">Teasing Championship</h2>
+      <p class="sub" style="animation:fadeUp .5s .2s both">We both tease each other. But who's the champion? 👑</p>
+      <div class="opts" style="animation:fadeUp .5s .3s both">
+        <button class="opt" onclick="pick(this,'p8r','p8x','teasing',0)"><span class="oem">🙋‍♂️</span>Sandip — king of
+          teasing</button>
+        <button class="opt" onclick="pick(this,'p8r','p8x','teasing',1)"><span class="oem">🙋‍♀️</span>Megha — queen of
+          comebacks</button>
+        <button class="opt" onclick="pick(this,'p8r','p8x','teasing',2)"><span class="oem">🤝</span>It's a tie. We're
+          both unhinged.</button>
+      </div>
+      <div class="resp" id="p8r"></div>
+      <div id="p8x" class="hide" style="margin-top:24px"><button class="bp" onclick="go(9)">Next 📊</button></div>
+    </div>
+  </section>
+
+  <!-- ====== P9: BUSY METER ====== -->
+  <section class="page" id="p9">
+    <div class="card">
+      <span class="spk" style="top:18px;right:26px;animation-delay:.5s"></span>
+      <span class="spk" style="bottom:22px;left:24px;background:var(--lav);animation-delay:1.3s"></span>
+      <div style="font-size:2rem;margin-bottom:12px">📊</div>
+      <p class="ey" style="animation:fadeUp .5s .05s both">Scientific analysis</p>
+      <h2 class="ttl" style="animation:fadeUp .5s .12s both">The Busy Meter</h2>
+      <p class="sub" style="animation:fadeUp .5s .2s both">How busy are you ACTUALLY? 🤔</p>
+      <div style="margin:28px 0;animation:fadeUp .5s .3s both">
+        <p id="bmv"
+          style="font-family:var(--fd);font-size:clamp(2.5rem,8vw,3.5rem);font-weight:700;color:var(--pink);margin-bottom:12px">
+          50%</p>
+        <input type="range" id="bms" min="0" max="100" value="50"
+          style="width:100%;accent-color:var(--pink);height:8px;cursor:pointer"
+          oninput="document.getElementById('bmv').textContent=this.value+'%'">
+        <div style="display:flex;justify-content:space-between;font-size:.75rem;color:var(--soft);margin-top:6px">
+          <span>Free as a bird 🕊️</span><span>CEO of Earth 🌍</span>
+        </div>
+      </div>
+      <button class="bp" id="bmb" onclick="busyGo()" style="animation:fadeUp .5s .4s both">Lock it in! 🔒</button>
+      <div class="resp" id="p10r"></div>
+      <div id="p10x" class="hide" style="margin-top:24px"><button class="bp" onclick="go(10)">Next 🗓️</button></div>
+    </div>
+  </section>
+
+  <!-- ====== P10: OCTOBER COUNTDOWN ====== -->
+  <section class="page" id="p10">
+    <div class="card" style="max-width:500px">
+      <span class="spk" style="top:14px;left:20px;animation-delay:.2s"></span>
+      <span class="spk" style="bottom:20px;right:26px;background:var(--peach);animation-delay:1.5s"></span>
+      <div style="font-size:2rem;margin-bottom:12px">🗓️</div>
+      <p class="ey" style="animation:fadeUp .5s .05s both">The big plan</p>
+      <h2 class="ttl" style="animation:fadeUp .5s .12s both">October Countdown</h2>
+      <div class="cntdn" id="cntdn" style="animation:fadeUp .5s .2s both"></div>
+      <p class="sub" style="animation:fadeUp .5s .3s both">What are we doing FIRST when I'm back?</p>
+      <div class="opts c3" style="animation:fadeUp .5s .35s both">
+        <button class="opt" style="text-align:center" onclick="pick(this,'p11r','p11x','octPlan',0)"><span
+            class="oem">☕</span>Coffee</button>
+        <button class="opt" style="text-align:center" onclick="pick(this,'p11r','p11x','octPlan',1)"><span
+            class="oem">🍕</span>Pizza</button>
+        <button class="opt" style="text-align:center" onclick="pick(this,'p11r','p11x','octPlan',2)"><span
+            class="oem">🌧️</span>Long walk</button>
+        <button class="opt" style="text-align:center" onclick="pick(this,'p11r','p11x','octPlan',3)"><span
+            class="oem">🚶</span>Roam around</button>
+        <button class="opt" style="text-align:center" onclick="pick(this,'p11r','p11x','octPlan',4)"><span
+            class="oem">🎯</span>Surprise me</button>
+      </div>
+      <div class="resp" id="p11r"></div>
+      <div id="p11x" class="hide" style="margin-top:24px"><button class="bp" onclick="go(11)">Next 🧪</button></div>
+    </div>
+  </section>
+
+  <!-- ====== P11: COMPATIBILITY LAB ====== -->
+  <section class="page" id="p11">
+    <div class="card" style="max-width:500px">
+      <span class="spk" style="top:16px;right:24px;animation-delay:.4s"></span>
+      <span class="spk" style="bottom:18px;left:20px;background:var(--lav);animation-delay:1.1s"></span>
+      <div style="font-size:2rem;margin-bottom:12px">🧪</div>
+      <p class="ey" style="animation:fadeUp .5s .05s both">Laboratory results</p>
+      <h2 class="ttl" style="animation:fadeUp .5s .12s both">Compatibility Lab</h2>
+      <p class="sub" style="animation:fadeUp .5s .2s both">Our official compatibility report. (Totally scientific.) 🔬
+      </p>
+      <div id="clBars" style="animation:fadeUp .5s .3s both"></div>
+      <div class="resp" id="p12r"></div>
+      <div id="p12x" class="hide" style="margin-top:24px"><button class="bp" onclick="go(12)">Next 📜</button></div>
+    </div>
+  </section>
+
+  <!-- ====== P12: CONSENT CERTIFICATE ====== -->
+  <section class="page" id="p12">
+    <div class="card">
+      <span class="spk" style="top:18px;left:26px;animation-delay:.6s"></span>
+      <div style="font-size:2rem;margin-bottom:12px">📜</div>
+      <p class="ey" style="animation:fadeUp .5s .05s both">Official document</p>
+      <h2 class="ttl" style="animation:fadeUp .5s .12s both">Certificate of Consent Awareness</h2>
+      <p class="sub" style="animation:fadeUp .5s .2s both">Remember that conversation? Yeah. This one's for you. 😌</p>
+      <div class="cert" style="animation:fadeUp .5s .3s both">
+        <p
+          style="font-family:var(--fd);font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:16px;letter-spacing:.05em">
+          CERTIFICATE OF EXCELLENCE</p>
+        <p style="font-size:.88rem;color:var(--soft);margin-bottom:6px">Awarded to</p>
+        <p style="font-family:var(--fd);font-size:1.4rem;font-weight:700;color:var(--pink);margin-bottom:16px">Sandip
+        </p>
+        <p style="font-size:.9rem;color:var(--text);line-height:1.6;margin-bottom:16px">For understanding consent like a
+          decent human being.<br>Most people don't even take the exam.<br><strong>Extra credit awarded.</strong> 🎓</p>
+        <div style="display:flex;justify-content:space-around;font-size:.82rem;margin-bottom:16px">
+          <div><span style="color:var(--pink);font-weight:700">Respect Level</span><br>100% ✅</div>
+          <div><span style="color:var(--pink);font-weight:700">Red Flags</span><br>0 🌳</div>
+        </div>
+        <p style="font-size:.78rem;color:var(--soft);font-style:italic">Verified by: Megha · <span id="certDate"></span>
+        </p>
+        <div id="certSeal" class="hide cert-seal">✅</div>
+      </div>
+      <button class="bp" id="certBtn" onclick="stampCert()"
+        style="margin-top:24px;animation:fadeUp .5s .4s both">Approve This Certificate ✅</button>
+      <div class="resp" id="p13r"></div>
+      <div id="p13x" class="hide" style="margin-top:24px"><button class="bp" onclick="go(13)">Next 💝</button></div>
+    </div>
+  </section>
+
+  <!-- ====== P13: HIDDEN EASTER EGGS ====== -->
+  <section class="page" id="p13">
+    <div class="card" style="max-width:500px;min-height:420px">
+      <span class="spk" style="top:14px;right:20px;animation-delay:.3s"></span>
+      <div style="font-size:2rem;margin-bottom:10px">💝</div>
+      <p class="ey">Treasure hunt</p>
+      <h2 class="ttl" style="font-size:clamp(1.5rem,4vw,2rem)">Find the Hidden Memories</h2>
+      <p class="sub">Tap the hearts scattered below. Each hides something special. 💕</p>
+      <div id="eeArea"
+        style="position:relative;width:100%;height:280px;border-radius:20px;background:linear-gradient(180deg,rgba(255,214,204,.15),rgba(237,233,254,.2));border:1.5px dashed var(--pink-lt);overflow:hidden">
+      </div>
+      <p id="eeCnt" style="font-size:.82rem;font-weight:600;color:var(--soft);margin-top:12px">0 / 10 memories found</p>
+      <div class="resp" id="p14r"></div>
+      <div id="p14x" class="hide" style="margin-top:20px"><button class="bp" onclick="go(14)">Next 🔮</button></div>
+    </div>
+  </section>
+
+  <!-- ====== P14: FUTURE PREDICTION ====== -->
+  <section class="page" id="p14">
+    <div class="card" style="max-width:500px">
+      <span class="spk" style="top:16px;left:22px;background:var(--lav);animation-delay:.5s"></span>
+      <span class="spk" style="bottom:20px;right:26px;animation-delay:1.2s"></span>
+      <div style="font-size:2.5rem;margin-bottom:12px">🔮</div>
+      <p class="ey" style="animation:fadeUp .5s .05s both">Certified prediction</p>
+      <h2 class="ttl" style="animation:fadeUp .5s .12s both">Your Future Together</h2>
+      <p class="sub" style="animation:fadeUp .5s .2s both">Our highly scientific AI has analysed everything… 🔬</p>
+      <div id="fpLoading" style="animation:fadeUp .5s .3s both">
+        <p id="fpLt" style="font-size:.88rem;color:var(--soft);font-style:italic">Scanning astrological data...</p>
+        <div
+          style="width:100%;height:6px;background:rgba(255,179,209,.2);border-radius:999px;overflow:hidden;margin-top:8px">
+          <div id="fpBar"
+            style="height:100%;width:0%;background:linear-gradient(90deg,var(--pink),var(--lav));border-radius:999px;transition:width 2.5s linear">
+          </div>
+        </div>
+      </div>
+      <div id="fpResults" class="hide" style="text-align:left;margin-top:20px"></div>
+      <div class="resp" id="p15r"></div>
+      <div id="p15x" class="hide" style="margin-top:24px"><button class="bp" onclick="go(15)">Next ✈️</button></div>
+    </div>
+  </section>
+
+
+  <!-- ====== P16: MEMORY CAPSULE ====== -->
+  <section class="page" id="p16">
+    <div class="card" style="max-width:520px">
+      <span class="spk" style="top:14px;left:22px;animation-delay:.2s"></span>
+      <span class="spk" style="top:20px;right:26px;background:var(--lav);animation-delay:.8s"></span>
+      <div class="hh" style="font-size:2.5rem;margin-bottom:8px">💌</div>
+      <p class="ey" style="animation:fadeUp .5s .05s both">Time capsule</p>
+      <h2 class="ttl" style="animation:fadeUp .5s .12s both;font-size:clamp(1.6rem,4vw,2.2rem)">Before You Go…</h2>
+      <p class="sub" style="animation:fadeUp .5s .2s both">Leave me something to remember. This stays between us. 🤫</p>
+      <div style="animation:fadeUp .5s .3s both">
+        <div class="fg"><label>❤️ Which page made you laugh the most?</label>
+          <select class="fi" id="mc1">
+            <option value="">Pick one…</option>
+            <option>Green Flag Test 🌳</option>
+            <option>Sing a Song 🎵</option>
+            <option>Guess Who 💬</option>
+            <option>Rapid Fire ⚡</option>
+            <option>Heart Catcher 🎮</option>
+            <option>Permission Slip 📋</option>
+            <option>Teasing Championship 🏆</option>
+            <option>Busy Meter 📊</option>
+            <option>Compatibility Lab 🧪</option>
+            <option>Consent Certificate 📜</option>
+            <option>Easter Eggs 💝</option>
+            <option>Future Prediction 🔮</option>
+          </select>
+        </div>
+        <div class="fg"><label>❤️ Which memory should we recreate in October?</label><input class="fi" id="mc2"
+            placeholder="Type here…"></div>
+        <div class="fg"><label>❤️ One word that describes me</label><input class="fi" id="mc3"
+            placeholder="Just one word…"></div>
+        <div class="fg"><label>❤️ Your favourite thing about me</label><input class="fi" id="mc4"
+            placeholder="Be honest 😊"></div>
+        <div class="fg"><label>❤️ Your least favourite thing about me</label><input class="fi" id="mc5"
+            placeholder="I can take it 😅"></div>
+        <div class="fg"><label>❤️ One thing you've never told me</label><textarea class="fi" id="mc6" rows="2"
+            placeholder="Spill it… 🤫"></textarea></div>
+        <div class="fg"><label>❤️ Leave a secret message only I'll read</label><textarea class="fi" id="mc7" rows="3"
+            placeholder="This is just for us…"></textarea></div>
+      </div>
+      <button class="bp" onclick="submitCapsule()" style="margin-top:8px">Submit Memory Capsule 💌</button>
+    </div>
+  </section>
+
+  <!-- ====== P17: JOURNEY SUMMARY ====== -->
+  <section class="page" id="p17">
+    <div class="card" style="max-width:520px">
+      <span class="spk" style="top:14px;left:22px;animation-delay:.2s"></span>
+      <span class="spk" style="top:20px;right:26px;background:var(--lav);animation-delay:.8s"></span>
+      <span class="spk" style="bottom:18px;left:30px;background:var(--peach);animation-delay:1.4s"></span>
+      <span class="spk" style="bottom:24px;right:20px;animation-delay:2s"></span>
+      <div class="hh" style="font-size:3rem;margin-bottom:8px">❤️</div>
+      <h2 class="ttl" style="animation:fadeUp .6s .1s both;font-size:clamp(1.8rem,5vw,2.5rem)">Your Journey Summary ✨
+      </h2>
+      <p class="sub" style="animation:fadeUp .6s .2s both">Thank you for taking this little journey.<br>If this made you
+        smile even once, <strong>mission accomplished.</strong> 😊</p>
+      <div id="summaryCards" style="animation:fadeUp .6s .3s both"></div>
+      <div
+        style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px;animation:fadeUp .6s .5s both">
+        <button class="bp" onclick="replay()">❤️ Play Again</button>
+        <button class="bg2" onclick="downloadJSON()">📥 Download Responses</button>
+        <button class="bg2" onclick="shareScore()">📸 Share</button>
+      </div>
+      <div id="secE" class="hide"
+        style="margin-top:28px;padding:24px;background:linear-gradient(135deg,rgba(255,107,157,.08),rgba(192,132,252,.08));border-radius:16px;border:1.5px solid rgba(255,179,209,.25)">
+        <p
+          style="font-family:var(--fd);font-size:clamp(1.1rem,3vw,1.35rem);font-weight:500;color:var(--text);line-height:1.7">
+          See you when I'm back. 🌸<br><br>I'm looking forward to making even better memories together. ❤️</p>
+      </div>
+      <button class="bg2" onclick="secretEnd()" style="margin-top:16px;animation:fadeUp .6s .6s both">⭐ Secret
+        Ending</button>
+    </div>
+  </section>
+
+  <script>
+    /* ============ STATE ============ */
+    const TOTAL = 17, LS = 'mgv5';
+    let S = { page: 0, answers: {}, score: 0, startTime: Date.now() };
+    try { const d = localStorage.getItem(LS); if (d) S = { ...S, ...JSON.parse(d) } } catch (e) { }
+    function save() { try { localStorage.setItem(LS, JSON.stringify(S)) } catch (e) { } }
+
+    /* ============ CORE NAV ============ */
+    function go(n) {
+      const cur = document.querySelector('.page.on');
+      if (cur) { cur.style.animation = 'sOut .28s ease forwards'; setTimeout(() => { cur.classList.remove('on'); cur.style.animation = ''; _show(n) }, 260) }
+      else _show(n);
+    }
+    function _show(n) {
+      const el = document.getElementById('p' + n);
+      if (!el) { console.warn('missing p' + n); return }
+      el.classList.add('on'); window.scrollTo({ top: 0, behavior: 'smooth' });
+      S.page = n; save();
+      const pct = Math.round(n / TOTAL * 100);
+      document.getElementById('pb').style.width = Math.min(pct, 100) + '%';
+      document.getElementById('pl').textContent = n > 0 ? Math.min(pct, 100) + '% ✨' : '';
+      if (pageInits[n]) pageInits[n]();
+    }
+
+    /* ============ AMBIENT HEARTS ============ */
+    const HC = ['❤️', '🩷', '💕', '💗', '💖', '🌸', '✨', '💝'];
+    function spH() { const el = document.createElement('span'); el.className = 'fh'; el.textContent = HC[Math.floor(Math.random() * HC.length)]; el.style.left = Math.random() * 100 + 'vw'; el.style.fontSize = (.75 + Math.random() * .8) + 'rem'; const d = 7 + Math.random() * 9; el.style.animationDuration = d + 's'; el.style.animationDelay = (Math.random() * 2) + 's'; document.getElementById('hbg').appendChild(el); setTimeout(() => el.remove(), (d + 2.5) * 1000) }
+    setInterval(spH, 2600); for (let i = 0; i < 5; i++)setTimeout(spH, i * 700);
+
+    /* ============ MUSIC ============ */
+    let mOn = false;
+    document.getElementById('mb').onclick = () => { mOn = !mOn; document.getElementById('mb').textContent = mOn ? '🎶' : '🎵'; const a = document.getElementById('bgm'); if (mOn) { a.volume = .35; a.play().catch(() => { }) } else a.pause() };
+
+    /* ============ TOAST ============ */
+    function toast(m, ms = 2800) { const t = document.getElementById('toast'); t.textContent = m; t.classList.add('on'); setTimeout(() => t.classList.remove('on'), ms) }
+
+    /* ============ RIPPLE ============ */
+    document.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; const r = document.createElement('span'); r.className = 'rpl'; const rc = b.getBoundingClientRect(); r.style.left = (e.clientX - rc.left) + 'px'; r.style.top = (e.clientY - rc.top) + 'px'; b.style.overflow = 'hidden'; b.style.position = 'relative'; b.appendChild(r); r.addEventListener('animationend', () => r.remove()) });
+
+    /* ============ CONFETTI ============ */
+    function launchConfetti(ms = 4500) { const cv = document.getElementById('cvs'), ctx = cv.getContext('2d'); cv.style.display = 'block'; cv.width = innerWidth; cv.height = innerHeight; const cols = ['#FF6B9D', '#C084FC', '#FFB3D1', '#FFD6CC', '#EDE9FE']; const ps = [...Array(140)].map(() => ({ x: Math.random() * cv.width, y: Math.random() * cv.height - cv.height, w: 5 + Math.random() * 8, h: 9 + Math.random() * 6, c: cols[Math.floor(Math.random() * cols.length)], rot: Math.random() * 360, vx: (Math.random() - .5) * 2.5, vy: 1.4 + Math.random() * 2.5, vr: (Math.random() - .5) * 4, a: 1 })); const t0 = Date.now(); (function fr() { ctx.clearRect(0, 0, cv.width, cv.height); const el = Date.now() - t0, pg = el / ms; ps.forEach(p => { p.x += p.vx; p.y += p.vy; p.rot += p.vr; p.a = Math.max(0, 1 - Math.pow(pg * 1.3, 2)); ctx.save(); ctx.globalAlpha = p.a; ctx.translate(p.x + p.w / 2, p.y + p.h / 2); ctx.rotate(p.rot * Math.PI / 180); ctx.fillStyle = p.c; ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h); ctx.restore() }); if (el < ms) requestAnimationFrame(fr); else { ctx.clearRect(0, 0, cv.width, cv.height); cv.style.display = 'none' } })() }
+
+    /* ============ GENERIC PICK ============ */
+    const RESPS = {
+      greenFlag: ['Green Flag status: CONFIRMED ✅<br>I\'m framing this. Screenshot taken. No take-backs. 😌', 'Investigating?! I literally passed the consent test AND make you laugh.<br>What more data do you need? 😤📊', 'RED?! Me?! The guy who sends good morning texts and remembers your food preferences?<br>🚩 → 🌳 Appeal filed. 😂'],
+      firstMeet: ['October concert confirmed! 🎤 I\'ll start practicing my acoustic set. No mic, just vibes. 😉', 'Next call it is! 📞 If you don\'t avoid or forget it this time, I promise to sing! 😂', 'Deal! 🍕 A slice of pizza for a song. That\'s a fair transaction. 😉', 'Ouch. 😂 My singing isn\'t THAT bad, is it? (Actually, don\'t answer that. You\'re probably saving yourself.) 🙉'],
+      teasing: ['🏆 OFFICIAL TEASING CHAMPION: SANDIP 🎉<br><br>"I\'d like to thank Megha for being so easy to tease."<br>*drops mic* 🎤', '👑 TEASING QUEEN: MEGHA<br><br>Okay but let\'s be real… your comebacks ARE legendary.<br>I\'m just warming up. 😤', 'A TIE?! That\'s the most diplomatic answer ever. 🤝<br>Fine. Co-champions.<br>But I\'m challenging again in October. 🏆'],
+      octPlan: ['Coffee first. Classic. ☕<br>We\'ll need caffeine for everything else I\'ve planned. 😏', 'Pizza first! Smart. 🍕<br>Can\'t explore on an empty stomach.', 'Long walk with you? I\'d walk to the moon. 🌧️<br>(Okay maybe just around the block. But romantically.)', 'Roaming without destination is literally my favourite genre of hanging out. 🚶<br>Let\'s get lost. ❤️', 'Surprise? Oh I HAVE surprises. 🎯<br>You have no idea. 😏✨'],
+      ifAppeared: ['That smile alone would make flying to Hyderabad worth it. ✈️🥰<br>I\'d cross the world for just that one smile.', 'Saving this answer. Screenshotted. Will collect in October. 🫂<br>I\'d never let go. (Okay, eventually. For food.) 😅', 'Coffee with you > literally anything else on earth. ☕✨<br>Two cups, one table, a thousand things to say.', 'IGNORE?! After 17 pages of this quiz?! 😂<br>The audacity. We both know you\'d run towards me. 🤗']
+    };
+    function pick(btn, rId, xId, key, i) {
+      const opts = btn.closest('.opts'); if (!opts) return;
+      opts.querySelectorAll('.opt').forEach(o => { o.classList.remove('picked'); o.style.opacity = '.4'; o.style.pointerEvents = 'none' });
+      btn.classList.add('picked'); btn.style.opacity = '1';
+      S.answers[key] = i; S.score += 10; save();
+      const r = document.getElementById(rId); r.innerHTML = RESPS[key][i]; r.classList.add('on');
+      const x = document.getElementById(xId); x.classList.remove('hide'); x.style.animation = 'fadeUp .5s .15s both';
+    }
+
+    /* ============ P1: RUNAWAY ============ */
+    let p1t = 0, p1s = false, p1d = false;
+    function noRun(e) { if (p1s || p1d) return; if (e) e.preventDefault(); p1t++; const btn = document.getElementById('bno'), card = document.getElementById('p1c'); btn.style.animation = 'wiggle .4s ease-in-out'; setTimeout(() => btn.style.animation = '', 420); if (p1t >= 3) { p1s = true; btn.className = 'bno sttl'; btn.style.cssText = 'position:relative'; document.getElementById('ynw').style.justifyContent = 'center'; setN('Okay okay… I\'ll let you choose 😭'); return } const cw = card.offsetWidth, ch = card.offsetHeight, bw = btn.offsetWidth || 110, bh = btn.offsetHeight || 48, pad = 18; btn.className = 'bno run'; btn.style.left = (pad + Math.random() * (cw - bw - pad * 2)) + 'px'; btn.style.top = (pad + Math.random() * (ch - bh - pad * 2)) + 'px'; btn.style.right = 'auto'; btn.style.transform = 'none'; setN(['It slipped away… 👀', 'So close! 😏', 'Try harder! 😂'][p1t - 1] || '') }
+    function setN(m) { const n = document.getElementById('p1n'); n.style.animation = 'none'; n.offsetHeight; n.style.animation = 'fadeUp .3s ease both'; n.textContent = m }
+    function dim(id) { const el = document.getElementById(id); el.style.opacity = '.35'; el.style.pointerEvents = 'none' }
+    function p1Y() { if (p1d) return; p1d = true; S.answers.likeMe = 'yes'; S.score += 10; save(); dim('ynw'); const r = document.getElementById('p1r'); r.innerHTML = "That's all I needed to hear. 🥺<br>Let's keep going together… ❤️"; r.classList.add('on'); const x = document.getElementById('p1x'); x.classList.remove('hide'); x.style.animation = 'fadeUp .5s .1s both' }
+    function p1N() { if (!p1s || p1d) return; p1d = true; S.answers.likeMe = 'no'; save(); dim('ynw'); const r = document.getElementById('p1r'); r.innerHTML = 'I appreciate your honesty. ❤️<br>Let\'s still be friends. 🌸'; r.classList.add('on'); const x = document.getElementById('p1x'); x.classList.remove('hide'); x.style.animation = 'fadeUp .5s .1s both' }
+
+    /* ============ P4: GUESS WHO ============ */
+    const GW = [
+      { q: '"I\'m busy"', ans: 'megha', right: 'The most famous lie in our chat history. 📱😂', wrong: 'Nice try, but this one\'s ALL Megha. 😏' },
+      { q: '"You\'re a green flag"', ans: 'megha', right: 'And I\'ve been waving proudly ever since. 🌳🏳️', wrong: 'I wish I said it, but that was your diagnosis. 😌' },
+      { q: '"Let\'s get on a call"', ans: 'sandip', right: 'I constantly ask, even if you avoid it! 📞😂', wrong: 'Megha asking for calls? That\'s a myth. 🙈' },
+      { q: '"We\'ll meet in October"', ans: 'both', right: 'Trick question! We BOTH say this every week. 📅😂', wrong: 'Trick question — we BOTH say this! 📅' },
+      { q: '"Ratro hok"', ans: 'megha', right: 'And yet you slept without calling me 🤨', wrong: 'Oh come on, you KNOW You said that. 😂' }
+    ];
+    let gwI = 0, gwScore = 0, gwBusy = false;
+    function gwInit() {
+      gwI = 0; gwScore = 0; gwBusy = false;
+      const d = document.getElementById('gwd'); d.innerHTML = '';
+      for (let i = 0; i < 5; i++) { const dot = document.createElement('span'); dot.className = 'dot' + (i === 0 ? ' on' : ''); d.appendChild(dot) }
+      gwShowQ();
+    }
+    function gwShowQ() {
+      if (gwI >= 5) return;
+      const q = document.getElementById('gwq'); q.style.animation = 'none'; q.offsetHeight; q.style.animation = 'fadeUp .35s ease both';
+      q.textContent = GW[gwI].q;
+      document.getElementById('gwr').classList.remove('on');
+      document.getElementById('gwS').style.opacity = '1'; document.getElementById('gwS').style.pointerEvents = 'auto';
+      document.getElementById('gwM').style.opacity = '1'; document.getElementById('gwM').style.pointerEvents = 'auto';
+    }
+    function gwAns(who) {
+      if (gwBusy || gwI >= 5) return; gwBusy = true;
+      const correct = GW[gwI].ans === 'both' || (who === GW[gwI].ans);
+      if (correct) gwScore++;
+      document.getElementById('gwS').style.opacity = who === 'sandip' ? '1' : '.4'; document.getElementById('gwS').style.pointerEvents = 'none';
+      document.getElementById('gwM').style.opacity = who === 'megha' ? '1' : '.4'; document.getElementById('gwM').style.pointerEvents = 'none';
+      const r = document.getElementById('gwr'); r.innerHTML = (correct ? '✅ Correct! ' : '❌ Nope! ') + GW[gwI][correct ? 'right' : 'wrong']; r.classList.add('on');
+      const dots = document.getElementById('gwd').children; if (dots[gwI]) dots[gwI].classList.add('on');
+      gwI++;
+      if (gwI < 5) { if (dots[gwI]) dots[gwI].classList.add('on'); setTimeout(() => { gwBusy = false; gwShowQ() }, 1800) }
+      else { S.answers.guessWho = gwScore; S.score += gwScore * 5; save(); setTimeout(() => { gwBusy = false; const verdict = gwScore >= 4 ? 'You remember everything! 📓' : 'You literally said these things! 😂'; r.innerHTML = 'Score: ' + gwScore + '/5<br>' + verdict; r.classList.add('on'); const x = document.getElementById('p4x'); x.classList.remove('hide'); x.style.animation = 'fadeUp .5s .1s both' }, 1800) }
+    }
+
+    /* ============ P5: RAPID FIRE ============ */
+    const RF = [
+      { q: 'Who texts first more often?', me: 'Someone has to keep this going! 😤', you: 'And I appreciate every single one. 🥰' },
+      { q: 'Who takes longer to reply?', me: 'At least I come back with quality content! 📝', you: '"Busy" is just a vibe, right? 😏' },
+      { q: 'Who is hornier?', me: 'I\'m just built different 🗺️', you: 'Then why make me wait?? Next time in person.. No excuses! 🌸' },
+      { q: 'Who makes the other laugh more?', me: 'Told you I\'m funny. Receipt saved. 🧾', you: 'You don\'t even have to try. That\'s the scary part. 😂' },
+      { q: 'Who would be the strict parent?', me: 'Someone has to enforce bedtime! 🫡', you: 'The kids are gonna love you and fear me. Perfect balance. 😈' },
+      { q: 'Who is more dramatic?', me: 'I prefer "expressive." 🎭', you: 'Your reactions in chat say otherwise. 😂' },
+      { q: 'Who will miss the other more before October?', me: 'Already counting days. 📅', you: 'Bold of you to assume I\'m not already. 🥺' }
+    ];
+    let rfI = 0, rfBusy = false;
+    function rfInit() {
+      rfI = 0; rfBusy = false; S.answers.rapidFire = [];
+      const d = document.getElementById('rfd'); d.innerHTML = '';
+      for (let i = 0; i < 8; i++) { const dot = document.createElement('span'); dot.className = 'dot' + (i === 0 ? ' on' : ''); d.appendChild(dot) }
+      rfShowQ();
+    }
+    function rfShowQ() {
+      if (rfI >= 8) return;
+      const q = document.getElementById('rfq'); q.style.animation = 'none'; q.offsetHeight; q.style.animation = 'fadeUp .35s ease both';
+      q.textContent = RF[rfI].q;
+      document.getElementById('rfr').classList.remove('on');
+      document.getElementById('rfme').style.opacity = '1'; document.getElementById('rfme').style.pointerEvents = 'auto';
+      document.getElementById('rfyu').style.opacity = '1'; document.getElementById('rfyu').style.pointerEvents = 'auto';
+    }
+    function rfAns(who) {
+      if (rfBusy || rfI >= 8) return; rfBusy = true;
+      S.answers.rapidFire.push(who); S.score += 5; save();
+      document.getElementById('rfme').style.opacity = who === 'me' ? '1' : '.4'; document.getElementById('rfme').style.pointerEvents = 'none';
+      document.getElementById('rfyu').style.opacity = who === 'you' ? '1' : '.4'; document.getElementById('rfyu').style.pointerEvents = 'none';
+      const r = document.getElementById('rfr'); r.innerHTML = who === 'me' ? RF[rfI].me : RF[rfI].you; r.classList.add('on');
+      const dots = document.getElementById('rfd').children; if (dots[rfI]) dots[rfI].classList.add('on');
+      rfI++;
+      if (rfI < 8) { if (dots[rfI]) dots[rfI].classList.add('on'); setTimeout(() => { rfBusy = false; rfShowQ() }, 1400) }
+      else setTimeout(() => { rfBusy = false; r.innerHTML = '🎉 All done! You\'re a natural at rapid fire.'; r.classList.add('on'); const x = document.getElementById('p5x'); x.classList.remove('hide'); x.style.animation = 'fadeUp .5s .1s both' }, 1400);
+    }
+
+    /* ============ P6: HEART CATCHER ============ */
+    const GC = ['You have a beautiful smile 😊', 'I still think about our first meet 🌸', 'Your "I\'m busy" texts are adorable 🤭', 'You laugh at my worst jokes and I love it 🎵', 'Getting a reply from you makes my day ✨', 'You called me a green flag and I peaked 🌳', 'October can\'t come fast enough 📅', 'You make teasing an art form 💪', 'You\'re my favourite notification 📱', 'Building this for you says a lot 🌍'];
+    let gTimer, gSec = 20, gCaught = 0, gActive = false;
+    function startGame() { document.getElementById('gstart').style.display = 'none'; gSec = 20; gCaught = 0; gActive = true; document.getElementById('gtm').textContent = '20s'; document.getElementById('gsc').textContent = '0 / 10 💖'; gTimer = setInterval(() => { gSec--; document.getElementById('gtm').textContent = gSec + 's'; if (gSec <= 5) document.getElementById('gtm').style.color = '#e74c3c'; if (gSec <= 0) { clearInterval(gTimer); gActive = false; endGame() } }, 1000); spawnH() }
+    function spawnH() { const area = document.getElementById('gar'), em = ['💖', '💗', '💕', '💓', '❤️', '🩷', '💝']; for (let i = 0; i < 3; i++)setTimeout(() => addH(area, em), i * 300); const si = setInterval(() => { if (!gActive) { clearInterval(si); return } addH(area, em) }, 900) }
+    function addH(area, em) { if (gCaught >= 10 || !gActive) return; const h = document.createElement('span'); h.textContent = em[Math.floor(Math.random() * em.length)]; h.style.cssText = 'position:absolute;font-size:1.8rem;cursor:pointer;user-select:none;z-index:2;transition:transform .1s;touch-action:manipulation'; const aw = area.offsetWidth - 40, ah = area.offsetHeight - 40; h.style.left = (10 + Math.random() * aw) + 'px'; h.style.top = (10 + Math.random() * ah) + 'px'; let dx = (Math.random() - .5) * 1.5, dy = (Math.random() - .5) * 1.5; const mv = setInterval(() => { if (!gActive || !h.parentNode) { clearInterval(mv); return } let l = parseFloat(h.style.left), t = parseFloat(h.style.top); l += dx; t += dy; if (l < 0 || l > aw) dx *= -1; if (t < 0 || t > ah) dy *= -1; h.style.left = l + 'px'; h.style.top = t + 'px' }, 30); const ct = e => { e.preventDefault(); e.stopPropagation(); if (!gActive || gCaught >= 10) return; gCaught++; clearInterval(mv); h.style.transform = 'scale(1.8)'; h.style.opacity = '0'; h.style.transition = 'all .3s'; setTimeout(() => h.remove(), 300); document.getElementById('gsc').textContent = gCaught + ' / 10 💖'; const cp = document.createElement('div'); cp.textContent = GC[gCaught - 1]; cp.style.cssText = 'position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#fff;border:1.5px solid var(--pink-lt);border-radius:12px;padding:8px 16px;font-size:.82rem;font-weight:500;white-space:nowrap;z-index:10;animation:bIn .4s ease both;pointer-events:none;box-shadow:0 4px 16px rgba(255,107,157,.15)'; area.appendChild(cp); setTimeout(() => cp.remove(), 1500); if (gCaught >= 10) { clearInterval(gTimer); gActive = false; setTimeout(endGame, 600) } }; h.addEventListener('click', ct); h.addEventListener('touchstart', ct, { passive: false }); area.appendChild(h) }
+    function endGame() { S.answers.heartsScore = gCaught; S.score += gCaught * 3; save(); const area = document.getElementById('gar'); area.querySelectorAll('span').forEach(s => s.remove()); const res = document.createElement('div'); res.style.cssText = 'position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;z-index:3;animation:bIn .5s ease both'; res.innerHTML = gCaught >= 10 ? '<div style="font-size:2.5rem">🎉</div><p style="font-family:var(--fd);font-size:1.3rem;font-weight:700">Perfect Score!</p><p style="font-size:.9rem;color:var(--soft)">You caught all 10! 💖</p>' : '<div style="font-size:2.5rem">😊</div><p style="font-family:var(--fd);font-size:1.3rem;font-weight:700">' + gCaught + '/10 Hearts!</p><p style="font-size:.9rem;color:var(--soft)">Each one counts 💕</p>'; area.appendChild(res); const cmp = document.getElementById('gcmps'); let html = '<p style="font-weight:600;font-size:.88rem;margin-bottom:10px">Your compliments 💌</p>'; for (let i = 0; i < gCaught; i++)html += '<p style="font-size:.85rem;color:var(--soft);padding:4px 0;border-bottom:1px solid rgba(255,179,209,.15)">' + GC[i] + '</p>'; cmp.innerHTML = html; cmp.style.maxHeight = '400px'; const x = document.getElementById('p6x'); x.classList.remove('hide'); x.style.animation = 'fadeUp .5s .2s both'; document.getElementById('gtm').textContent = 'Done!'; document.getElementById('gtm').style.color = 'var(--pink)' }
+
+    /* ============ P7: PERMISSION SLIP ============ */
+    const PS = [
+      { q: 'Can I touch your waist when we meet in October? 😏', opts: ['🥶 Only if your hands aren\'t cold', '🍕 Buy me food first', '👀 …maybe', '🍕 At least get me pizza first'], resps: ['Noted. Bringing hand warmers AND charm. 🧤😏', 'So the waist has a food toll? Noted. Will bribe with pizza. 🍕💰', 'That "maybe" is doing a LOT of heavy lifting. I\'ll take it. 😌', 'Pizza → waist access. Transaction accepted. 🍕✅'] },
+      { q: 'Are you serious about me? 🤔', opts: ['😐 I\'m doing your quiz at midnight. What do you think?', '🤔 Define "serious"', '😏 More than you deserve', '📅 Ask me again in October'], resps: ['Fair point. That IS pretty strong evidence. 📋✅', 'Serious: (adj.) — Still replying to Sandip\'s messages after months. See? You qualify. 📖', 'OUCH. But also… fair. I\'ll work harder. 💪😂', 'October it is. Setting a reminder to ask again. 📅🔔'] },
+      { q: 'Can I hold your hand in public? 🫣', opts: ['🫣 Only if you\'re not sweaty', '🙄 Obviously', '🍕 One hand. Other holds the pizza slice'], resps: ['I will bring TALCUM POWDER if I have to. These hands will be DRY. 🧴😤', 'OBVIOUSLY she says. Screenshotting this for court evidence. 📸😌', 'Priorities: pizza in left, Megha\'s hand in right. Perfect setup. 🍕🤝'] },
+      { q: 'What if I stare at you for too long? 👀', opts: ['😏 I\'ll stare back. Power move.', '📱 I\'ll pretend to check my phone', '🌡️ I\'ll blush and blame the weather'], resps: ['A STARING CONTEST?! Challenge accepted. Loser buys ice cream. 👁️👁️🍦', 'The classic phone-check escape. I\'ve seen you do it. Doesn\'t work in person. 😂📱', 'Hyderabad heat IS a convenient excuse. But we\'ll both know the truth. 🌡️❤️'] }
+    ];
+    let psI = 0, psBusy = false;
+    function psInit() {
+      psI = 0; psBusy = false;
+      const d = document.getElementById('psd'); d.innerHTML = '';
+      for (let i = 0; i < 4; i++) { const dot = document.createElement('span'); dot.className = 'dot' + (i === 0 ? ' on' : ''); d.appendChild(dot) }
+      psShowQ();
+    }
+    function psShowQ() {
+      if (psI >= 4) return;
+      const q = document.getElementById('psq'); q.style.animation = 'none'; q.offsetHeight; q.style.animation = 'fadeUp .35s ease both';
+      q.textContent = PS[psI].q;
+      document.getElementById('psr').classList.remove('on');
+      const optsDiv = document.getElementById('pso'); optsDiv.innerHTML = ''; optsDiv.style.animation = 'fadeUp .3s ease both';
+      PS[psI].opts.forEach((o, i) => { const btn = document.createElement('button'); btn.className = 'opt'; btn.textContent = o; btn.onclick = () => psAns(btn, i); optsDiv.appendChild(btn) });
+    }
+    function psAns(btn, i) {
+      if (psBusy) return; psBusy = true;
+      const opts = document.getElementById('pso'); opts.querySelectorAll('.opt').forEach(o => { o.classList.remove('picked'); o.style.opacity = '.4'; o.style.pointerEvents = 'none' }); btn.classList.add('picked'); btn.style.opacity = '1';
+      if (!S.answers.permissions) S.answers.permissions = []; S.answers.permissions.push(i); S.score += 5; save();
+      const r = document.getElementById('psr'); r.innerHTML = PS[psI].resps[i]; r.classList.add('on');
+      const dots = document.getElementById('psd').children; if (dots[psI]) dots[psI].classList.add('on');
+      psI++;
+      if (psI < 4) { if (dots[psI]) dots[psI].classList.add('on'); setTimeout(() => { psBusy = false; psShowQ() }, 1800) }
+      else setTimeout(() => { psBusy = false; r.innerHTML = '📋 Permission slip complete!<br>See you in October. No take-backs. 😏❤️'; r.classList.add('on'); const x = document.getElementById('p7x'); x.classList.remove('hide'); x.style.animation = 'fadeUp .5s .1s both' }, 1800);
+    }
+
+
+
+    /* ============ P10: BUSY METER ============ */
+    let bmDone = false;
+    function busyGo() {
+      if (bmDone) return; bmDone = true;
+      const v = parseInt(document.getElementById('bms').value); S.answers.busyMeter = v; S.score += 10; save();
+      document.getElementById('bmb').style.opacity = '.35'; document.getElementById('bmb').style.pointerEvents = 'none';
+      document.getElementById('bms').disabled = true;
+      let msg = '';
+      if (v <= 30) msg = 'So you CHOOSE to reply late. Noted. 📝😂';
+      else if (v <= 60) msg = 'Moderately busy. Reasonable.<br>I\'ll allow the delayed replies. 😌';
+      else if (v <= 89) msg = 'Busy but still here doing my quiz… interesting. 🤔';
+      else msg = 'CEO OF EARTH?! 🌍<br>So THAT\'S why I wait 3 hours for a reply!<br>But you\'re here now… so clearly I made the priority list. 😏';
+      msg += '<br><br><em>Real talk though — the fact that you still reply despite being busy? That\'s actually really sweet. 🥺</em>';
+      const r = document.getElementById('p10r'); r.innerHTML = msg; r.classList.add('on');
+      const x = document.getElementById('p10x'); x.classList.remove('hide'); x.style.animation = 'fadeUp .5s .15s both';
+    }
+
+    /* ============ P11: COUNTDOWN ============ */
+    function cntdnInit() {
+      const target = new Date('2026-10-01T00:00:00').getTime();
+      function update() {
+        const now = Date.now(), diff = Math.max(0, target - now);
+        const d = Math.floor(diff / 86400000), h = Math.floor((diff % 86400000) / 3600000), m = Math.floor((diff % 3600000) / 60000), s = Math.floor((diff % 60000) / 1000);
+        document.getElementById('cntdn').innerHTML =
+          '<div class="cntdn-unit"><div class="cntdn-num">' + d + '</div><div class="cntdn-lbl">Days</div></div>' +
+          '<div class="cntdn-unit"><div class="cntdn-num">' + h + '</div><div class="cntdn-lbl">Hours</div></div>' +
+          '<div class="cntdn-unit"><div class="cntdn-num">' + m + '</div><div class="cntdn-lbl">Min</div></div>' +
+          '<div class="cntdn-unit"><div class="cntdn-num">' + s + '</div><div class="cntdn-lbl">Sec</div></div>';
+      }
+      update(); setInterval(update, 1000);
+    }
+
+    /* ============ P12: COMPAT LAB ============ */
+    function clInit() {
+      const bars = [
+        { label: 'Texting Chemistry', pct: 82, note: 'Would be 100% if someone replied faster 👀' },
+        { label: 'Teasing Ability', pct: 100, note: 'Off the charts. We might need help. 😂' },
+        { label: 'Food Compatibility', pct: 80, note: 'Haven\'t tested enough restaurants yet 🍕' },
+        { label: 'Future Planning', pct: 92, note: 'October is basically planned in our heads already 📅' },
+        { label: 'Patience', pct: 78, note: 'Mostly because of reply times 😤' },
+        { label: 'Inside Jokes', pct: 94, note: 'Green flag, consent exam, late-night calls… 📞🌳' },
+        { label: 'Overall Vibe', pct: 99, note: 'Lost 1% because we haven\'t met enough times yet 🥺' }
+      ];
+      const c = document.getElementById('clBars'); c.innerHTML = '';
+      bars.forEach((b, i) => {
+        const row = document.createElement('div'); row.className = 'cb-row'; row.style.animation = 'fadeUp .4s ' + (i * 0.15) + 's both';
+        row.innerHTML = '<div class="cb-label"><span>' + b.label + '</span><span>' + b.pct + '%</span></div><div class="cb"><div class="cb-fill" id="cb' + i + '"></div></div><div class="cb-note">' + b.note + '</div>';
+        c.appendChild(row);
+        setTimeout(() => { document.getElementById('cb' + i).style.width = b.pct + '%' }, (i * 150) + 400);
+      });
+      setTimeout(() => {
+        const r = document.getElementById('p12r'); r.innerHTML = '<strong>Official Verdict:</strong><br>We\'re annoyingly compatible. 😌💕'; r.classList.add('on');
+        const x = document.getElementById('p12x'); x.classList.remove('hide'); x.style.animation = 'fadeUp .5s .15s both';
+      }, bars.length * 150 + 1200);
+    }
+
+    /* ============ P13: CONSENT CERT ============ */
+    function stampCert() {
+      document.getElementById('certBtn').style.opacity = '.35'; document.getElementById('certBtn').style.pointerEvents = 'none';
+      document.getElementById('certSeal').classList.remove('hide');
+      S.answers.certApproved = true; S.score += 10; save();
+      launchConfetti(3000);
+      setTimeout(() => {
+        const r = document.getElementById('p13r'); r.innerHTML = 'Thank you, your honour. 😌<br>This certificate will be framed and displayed. 🖼️'; r.classList.add('on');
+        const x = document.getElementById('p13x'); x.classList.remove('hide'); x.style.animation = 'fadeUp .5s .15s both';
+      }, 800);
+    }
+
+    /* ============ P14: EASTER EGGS ============ */
+    const EE_MSGS = ['Hoping you won\'t forget our next scheduled call! 📞', 'October trip is going to be epic. 📅', 'Green Flag Achievement Unlocked. 🌳🔓', 'You laughed here. I know because you sent 😂😂😂.', 'October is circled on my calendar. In red. 📅', 'You said "I\'m busy" 47 times. I counted. 📊', 'Building this for you because you\'re worth it. 🌸', 'If you\'re reading this, you\'re already smiling. 😏', 'Your teasing game is elite. Respect. 🏆', 'Some conversations with you feel like home. 🏡'];
+    let eeFound = 0;
+    function eeInit() {
+      eeFound = 0;
+      const area = document.getElementById('eeArea'); area.innerHTML = '';
+      const positions = [[15, 20], [70, 10], [40, 50], [85, 40], [25, 70], [60, 80], [10, 45], [50, 15], [80, 65], [35, 85]];
+      EE_MSGS.forEach((msg, i) => {
+        const h = document.createElement('span'); h.className = 'egg'; h.textContent = ['💖', '💗', '💕', '💓', '❤️', '🩷', '💝', '💘', '💞', '💌'][i];
+        h.style.left = positions[i][0] + '%'; h.style.top = positions[i][1] + '%';
+        h.onclick = () => {
+          if (h.classList.contains('found')) return;
+          h.classList.add('found'); eeFound++;
+          document.getElementById('eeCnt').textContent = eeFound + ' / 10 memories found';
+          toast(msg, 3000); S.score += 3; save();
+          if (eeFound >= 10) {
+            setTimeout(() => { const r = document.getElementById('p14r'); r.innerHTML = 'You found them all! 🎉<br>Achievement: Professional Memory Hunter 🏆'; r.classList.add('on'); const x = document.getElementById('p14x'); x.classList.remove('hide'); x.style.animation = 'fadeUp .5s .15s both' }, 500);
+          }
+        };
+        area.appendChild(h);
+      });
+      // Show continue even without finding all
+      setTimeout(() => { const x = document.getElementById('p14x'); if (x.classList.contains('hide')) { x.classList.remove('hide'); x.style.animation = 'fadeUp .5s both' } }, 15000);
+    }
+
+    /* ============ P15: FUTURE PREDICTION ============ */
+    function fpInit() {
+      const preds = [
+        { icon: '👶', text: '<strong>Kids:</strong> 2. One stubborn like you, one chill like me. Both adorable.' },
+        { icon: '🐕', text: '<strong>Pet:</strong> Upto You whatever You like, Better to pet me!!!!"' },
+        { icon: '☕', text: '<strong>Morning routine:</strong> Kisses and cuddles' },
+        { icon: '🎂', text: '<strong>Anniversaries:</strong> I\'ll remember. You\'ll pretend you forgot then surprise me. Classic.' },
+      ];
+      const texts = ['Scanning astrological data...', 'Consulting the universe...', 'Cross-referencing your chat history...', 'Calculating future timelines...'];
+      let ti = 0;
+      const txtInt = setInterval(() => { ti++; if (ti < texts.length) document.getElementById('fpLt').textContent = texts[ti] }, 700);
+      setTimeout(() => document.getElementById('fpBar').style.width = '100%', 100);
+      setTimeout(() => {
+        clearInterval(txtInt);
+        document.getElementById('fpLoading').classList.add('hide');
+        const res = document.getElementById('fpResults'); res.classList.remove('hide');
+        preds.forEach((p, i) => {
+          setTimeout(() => {
+            const div = document.createElement('div'); div.style.cssText = 'display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,179,209,.15);font-size:.92rem;line-height:1.5;animation:fadeUp .4s ease both';
+            div.innerHTML = '<span style="font-size:1.4rem;flex-shrink:0">' + p.icon + '</span><span>' + p.text + '</span>';
+            res.appendChild(div);
+            if (i === preds.length - 1) {
+              setTimeout(() => {
+                const r = document.getElementById('p15r'); r.innerHTML = '<strong>Accept this future? 🔮</strong><br><br>Sealed. The universe has spoken.<br>See you in October to begin Phase 1. 😌'; r.classList.add('on');
+                const x = document.getElementById('p15x'); x.classList.remove('hide'); x.style.animation = 'fadeUp .5s .15s both';
+              }, 600);
+            }
+          }, (i + 1) * 400);
+        });
+      }, 3200);
+    }
+
+    /* ============ P17: MEMORY CAPSULE ============ */
+    function submitCapsule() {
+      const fields = ['mc1', 'mc2', 'mc3', 'mc4', 'mc5', 'mc6', 'mc7'];
+      const capsule = {};
+      fields.forEach(f => { const el = document.getElementById(f); capsule[f.replace('mc', 'q')] = el.value || '' });
+      S.answers.capsule = capsule; S.score += 20; save();
+      toast('Memory Capsule saved! 💌', 3000);
+      setTimeout(() => go(17), 1000);
+    }
+
+    /* ============ P18: SUMMARY ============ */
+    function summaryInit() {
+      launchConfetti(5000);
+      const burst = setInterval(() => { for (let i = 0; i < 3; i++)spH() }, 400); setTimeout(() => clearInterval(burst), 4000);
+      const mins = Math.round((Date.now() - S.startTime) / 60000);
+      const c = document.getElementById('summaryCards');
+      const capsule = S.answers.capsule || {};
+      let html = '';
+      html += '<div class="scard"><div class="scard-title">⏱️ Time Spent</div><div class="scard-val">' + Math.max(1, mins) + ' minutes of smiling</div></div>';
+      if (capsule.q1) html += '<div class="scard"><div class="scard-title">😂 Funniest Page</div><div class="scard-val">' + capsule.q1 + '</div></div>';
+      if (S.answers.octPlan !== undefined) { const plans = ['Coffee ☕', 'Pizza 🍕', 'Long walk 🌧️', 'Roaming around 🚶', 'Surprise 🎯']; html += '<div class="scard"><div class="scard-title">🗓️ October Plan</div><div class="scard-val">' + plans[S.answers.octPlan] + '</div></div>' }
+      if (capsule.q3) html += '<div class="scard"><div class="scard-title">💬 One Word for Me</div><div class="scard-val">' + capsule.q3 + '</div></div>';
+      if (capsule.q4) html += '<div class="scard"><div class="scard-title">❤️ Favourite Thing</div><div class="scard-val">' + capsule.q4 + '</div></div>';
+      if (S.answers.heartsScore) html += '<div class="scard"><div class="scard-title">💖 Hearts Caught</div><div class="scard-val">' + S.answers.heartsScore + ' / 10</div></div>';
+      html += '<div class="scard"><div class="scard-title">🧪 Compatibility</div><div class="scard-val">99% (Lost 1% because we haven\'t met enough)</div></div>';
+      c.innerHTML = html;
+    }
+
+    function replay() { S = { page: 0, answers: {}, score: 0, startTime: Date.now() }; save(); location.reload() }
+    function shareScore() {
+      const text = 'You have won a make-out session with me! 😘❤️';
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(() => toast('Copied to clipboard! 📋💕')).catch(() => toast(text, 4000));
+      else toast(text, 4000);
+    }
+    function downloadJSON() {
+      const blob = new Blob([JSON.stringify(S, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'megha_journey_responses.json'; a.click(); toast('Downloaded! 📥');
+    }
+    function secretEnd() { const el = document.getElementById('secE'); if (el.classList.contains('hide')) { el.classList.remove('hide'); el.style.animation = 'bIn .5s var(--spring) both'; launchConfetti(3000) } }
+
+    /* ============ PAGE INIT MAP ============ */
+    const pageInits = {
+      4: gwInit, 5: rfInit, 7: psInit,
+      10: cntdnInit, 11: clInit, 13: eeInit, 14: fpInit,
+      12: () => { document.getElementById('certDate').textContent = new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' }) },
+      17: summaryInit
+    };
+
+    /* ============ BOOT ============ */
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => document.body.classList.add('rdy'), 80);
+      if (S.page > 0) { const r = confirm('Welcome back 🌸\nResume from page ' + S.page + '?'); if (r) _show(S.page); else { S = { page: 0, answers: {}, score: 0, startTime: Date.now() }; save() } }
+      document.addEventListener('keydown', e => { if (e.key === 'ArrowRight') { const b = document.querySelector('.page.on button.bp'); if (b && !b.closest('.hide')) b.click() } });
+    });
+  </script>
+</body>
+
+</html>
